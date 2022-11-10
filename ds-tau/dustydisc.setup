@@ -40,14 +40,14 @@
        ndusttypesinp =           3    ! number of grain sizes
    ilimitdustfluxinp =           F    ! limit dust diffusion using Ballabio et al. (2018)
           igrainsize =           1    ! grain size distribution (0=log-space,1=manually)
-       grainsizeinp1 =       1.000    ! grain size1 (in cm)
-       grainsizeinp2 =       1.000    ! grain size2 (in cm)
-       grainsizeinp3 =       1.000    ! grain size3 (in cm)
+       grainsizeinp1 =       0.600    ! grain size1 (in cm)
+       grainsizeinp2 =      0.0015    ! grain size2 (in cm)
+       grainsizeinp3 =       0.080    ! grain size3 (in cm)
         dustbinfrac1 =       1.000    ! dust bin fraction1 (frac. of total dust)
         dustbinfrac2 =       0.000    ! dust bin fraction2 (frac. of total dust)
         dustbinfrac3 =       0.000    ! dust bin fraction3 (frac. of total dust)
-          igraindens =           0    ! grain density input (0=equal,1=manually)
-        graindensinp =       3.000    ! intrinsic grain density (in g/cm^3)
+          igraindens =           1    ! grain density input (0=equal,1=manually)
+        graindensinp =       1.000    ! intrinsic grain density (in g/cm^3)
             isetdust =           0    ! how to set dust density profile (0=equal to gas,1=custom,2=equal to gas with cutoffs)
 
 # set planets
@@ -55,8 +55,8 @@
             nplanets =           1    ! number of planets
 
 # planet:1
-            mplanet1 =       1.000    ! planet mass (in Jupiter mass)
-            rplanet1 =         10.    ! planet distance from star
+            mplanet1 =       2.000    ! planet mass (in Jupiter mass)
+            rplanet1 =        34.5    ! planet distance from star
          inclplanet1 =       0.000    ! planet orbital inclination (deg)
          accrplanet1 =       0.250    ! planet accretion radius (in Hill radius)
 
