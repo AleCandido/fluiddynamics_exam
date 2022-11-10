@@ -6,12 +6,8 @@ make
 make setup
 
 # copy prepared configuration
-# cp $SRCDIR/dustydisc.setup $RUNDIR
-./phantomsetup dustydisc
-# ./phantomsetup dustydisc <<<EOF
-# 0
-# 1
-# EOF
+cp $SRCDIR/dustydisc.setup $RUNDIR
+./phantomsetup dustydisc.setup
 
 # test run - to check star relaxation
 # cp $SRCDIR/dustydisc.in $RUNDIR
