@@ -21,7 +21,7 @@ make setup
 printf "15\n" | ./phantomsetup blast
 ls -l
 
-# actually run
+# actual run
 ./phantom blast.in
 
 popd
