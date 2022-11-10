@@ -1,0 +1,178 @@
+description: |
+  explain the reasons for setting parameters to the values given in
+  'dustydisc.setup'
+schema:
+  $variable:
+    value: the chosen value
+    motivation: reason for the choice
+    position: |
+      searchable reference in arxiv:2005.04244 ('null' if does not apply);
+      essentially, pieces of text to copy for Ctrl+F search (if multiple
+      references, they are on different lines, separated by lines with a single
+      + sign)
+parameters:
+
+  # resolution
+  np:
+    value: 300000
+    motivation: |
+      reasonable number for good enough resolution, but without pushing to much
+      performances
+    position: null
+  np_dust:
+    value: 66666
+    motivation: default
+    position: null
+
+  # units
+  dist_unit:
+    value: au
+    motivation: default
+    position: null
+  mass_unit:
+    value: solarm
+    motivation: default
+    position: null
+
+  # central object(s)/potential
+  icentral:
+    value: 1
+    motivation: |
+      the central star is modeled as a sink particle
+    position: |
+      We model the planet and the central star as sink particle
+  nsinks:
+    value: 1
+    motivation: |
+      set the sink only for the star, planet set later on
+    position: |
+      see 'icentral'
+
+  # options for central star
+  m1:
+    value: 0.830
+    motivation: |
+      mass of DS Tau, the star involved in the observation
+    position: |
+      Here, we study the protoplanetary disc orbiting around
+  accr1:
+    value: 1.000
+    motivation: default
+    position: null
+
+  # options for gas accretion disc
+  isetgas:
+    value: 0
+    motivation: |
+      when discussing gas surface density profile it is declared to be
+      normalized to the total disc mass
+    position: |
+      where Σc is a normalization constant, chosen in order to
+  itapergas:
+    value: T
+    motivation: |
+      the profile is declared to be exponentially tapered
+    position: |
+      see 'isetgas'
+  itapersetgas:
+    value: 0
+    motivation: |
+      Eq. (1) corresponds to this option
+    position: |
+      see 'isetgas'
+  ismoothgas:
+    value: T
+    motivation: default
+    position: null
+  iwarp:
+    value: F
+    motivation: |
+      default + inside information (Claudia)
+    position: null
+  R_in:
+    value: 10
+    motivation: |
+      match observations
+    position: |
+      (Lodato et al. 2019) surrounded by a gas and dust disc ex-
+      +
+      Tab. 1 (R_in)
+  R_ref:
+    value: 10
+    motivation: |
+      same as R_in
+    position: |
+      aspect ratio at the reference radius Rin.
+  R_out:
+    value: 100
+    motivation: |
+      match observations
+    position: |
+      see 'R_in' (R_out in Tab. 1)
+  R_c:
+    value: 70
+    motivation: |
+      match observations
+    position: |
+      where Σc is a normalization constant, chosen in order to
+      +
+      Tab. 1 (R_c)
+  disc_m:
+    value: 0.0048
+    motivation: |
+      mass of the gas disc, match observations
+    position: |
+      (keeping the gas mass constant at
+      +
+      Tab. 1 (M_gas)
+  pindex:
+    value: 1.000
+    motivation: |
+      exponent of the power-law in tapering
+    position: |
+      is the radius of the exponential taper and
+      +
+      Tab. 1 (p)
+  qindex:
+    value: 0.250
+    motivation: |
+      assumed power-law index of the sound speed radial profile
+    position: |
+      power-law index of the sound speed radial profile
+      +
+      Tab. 1 (q)
+  posangl:
+    value: 0.000
+    motivation: default
+    position: null
+  incl:
+    value: 65.0
+    motivation: |
+      Long et al. 2018
+    position: |
+      to sample the radiation field, assuming a disc inclination of
+      +
+      Tab. 1 (i)
+  H_R:
+    value: 0.060
+    motivation: |
+      aspect ratio at the reference radius
+    position: |
+      aspect ratio at the reference radius Rin
+      +
+      Tab. 1 (H / R_in)
+  alphaSS:
+    value: 0.005
+    motivations: |
+      effective Shakura & Sunyaev (1973) viscosity
+    position: |
+      Tab. 1 (\alpha_{SS})
+
+  # options for dust
+  dust_method:
+    value: 1
+    motivations: |
+      one fluid (for St< 1, Price & Laibe 2015; Ballabio et al. 2018)
+    position: |
+      one fluid (for St< 1
+
