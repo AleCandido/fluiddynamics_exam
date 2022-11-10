@@ -10,8 +10,8 @@ source env-vars.sh
 
 # Running an example calculation
 # ------------------------------
-mkdir -p _runs/blast
-pushd _runs/blast
+mkdir -p ../_runs/blast
+pushd ../_runs/blast
 
 ../../phantom/scripts/writemake.sh sedov >Makefile
 cat Makefile
@@ -28,5 +28,4 @@ popd
 
 # compute and print elapsed time
 end_time=$(date +%s)
-
 printf "\n\nTEST-BLAST, time: $(expr $end_time - $start_time)s.\n\n"

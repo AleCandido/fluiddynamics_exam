@@ -11,7 +11,7 @@ source env-vars.sh
 
 # PHANTOM
 # is already in this repo as a submodule, see README.md
-pushd phantom
+pushd ../phantom
 
 # Running the testsuite
 # ---------------------
@@ -19,4 +19,6 @@ make SYSTEM=gfortran test
 
 popd
 
+# compute and print elapsed time
+end_time=$(date +%s)
 printf "\n\nTEST-SUITE, time: $(expr $end_time - $start_time)s.\n\n"
