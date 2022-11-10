@@ -16,8 +16,8 @@ tde-example/     # <- scripts to reproduce tutorial "Setting up stars and tidal 
 
 Scripts are collected by folder, descriptions in the respective README files:
 
-- [test](./test/README.md)
-- [TDE example](./tde-example/README.md)
+- [test](./test)
+- [TDE example](./tde-example)
 
 ## Phantom code
 
