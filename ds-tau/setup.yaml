@@ -19,10 +19,6 @@ parameters:
       reasonable number for good enough resolution, but without pushing to much
       performances
     position: null
-  np_dust:
-    value: 66666
-    motivation: default
-    position: null
 
   # units
   dist_unit:
@@ -234,7 +230,7 @@ parameters:
     motivations: |
       use the value provided in the paper
     position: null
-  graindensinp:
+  graindensinp1:
     value: 1.000
     motivations: |
       essentially little to not constraint: "the gap width alone cannot
@@ -245,6 +241,16 @@ parameters:
       Second, as pointed out also by Pinte
       +
       Tab. 1 (\rho_d)
+  graindensinp2:
+    value: 1.000
+    motivations: |
+      see 'graindensinp1'
+    position: null
+  graindensinp3:
+    value: 1.000
+    motivations: |
+      see 'graindensinp1'
+    position: null
   isetdust:
     value: 0
     motivations: |

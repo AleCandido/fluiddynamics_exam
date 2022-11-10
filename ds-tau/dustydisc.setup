@@ -2,7 +2,6 @@
 
 # resolution
                   np =      300000    ! number of gas particles
-             np_dust =       66666    ! number of large dust particles
 
 # units
            dist_unit =          au    ! distance unit (e.g. au,pc,kpc,0.1pc)
@@ -22,15 +21,15 @@
         itapersetgas =           0    ! how to set taper (0=exp[-(R/R_c)^(2-p)], 1=[1-exp(R-R_out)]
           ismoothgas =           T    ! smooth inner disc
                iwarp =           F    ! warp disc
-                R_in =       10.00    ! inner radius
-               R_ref =       10.00    ! reference radius
+                R_in =         10.    ! inner radius
+               R_ref =         10.    ! reference radius
                R_out =        100.    ! outer radius
                  R_c =        150.    ! characteristic radius of the exponential taper
               disc_m =      0.0048    ! disc mass
               pindex =       1.000    ! p index
               qindex =       0.250    ! q index
              posangl =       0.000    ! position angle (deg)
-                incl =      65.000    ! inclination (deg)
+                incl =         65.    ! inclination (deg)
                  H_R =       0.060    ! H/R at R=R_ref
              alphaSS =       0.005    ! desired alphaSS
 
@@ -47,7 +46,9 @@
         dustbinfrac2 =       0.400    ! dust bin fraction2 (frac. of total dust)
         dustbinfrac3 =       0.200    ! dust bin fraction3 (frac. of total dust)
           igraindens =           1    ! grain density input (0=equal,1=manually)
-        graindensinp =       1.000    ! intrinsic grain density (in g/cm^3)
+       graindensinp1 =       1.000    ! grain density1 (in g/cm^3)
+       graindensinp2 =       1.000    ! grain density2 (in g/cm^3)
+       graindensinp3 =       1.000    ! grain density3 (in g/cm^3)
             isetdust =           0    ! how to set dust density profile (0=equal to gas,1=custom,2=equal to gas with cutoffs)
 
 # set planets
