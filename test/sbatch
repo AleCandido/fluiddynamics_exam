@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH --time=60
-#SBATCH --nodes=1
+#SBATCH --nodes=5
 #SBATCH --cpus-per-task=10
 #SBATCH --output=@-ROOT-@/_runs/@-PROJECT-@-@-TIME-@-%j.log
 
