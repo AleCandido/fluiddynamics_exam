@@ -8,5 +8,5 @@ sed "s|@-PROJECT-@|$1|g" $1/sbatch >$SCRIPT
 sed "s|@-ROOT-@|$HERE|g" $SCRIPT -i
 sed "s|@-TIME-@|$TIME|g" $SCRIPT -i
 chmod +x $SCRIPT
-# sbatch $SCRIPT
-# rm -f $SCRIPT
+sbatch $SCRIPT
+rm -f $SCRIPT
