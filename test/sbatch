@@ -1,5 +1,6 @@
 #!/bin/sh
 #SBATCH --time=60
 #SBATCH --nodes=1
+#SBATCH --output=@-ROOT-@/_runs/@-PROJECT-@-@-TIME-@-%j.log
 
-srun bash @-FOLDER-@/full.bash
+srun bash @-ROOT-@/@-PROJECT-@/full.bash
