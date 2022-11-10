@@ -1,0 +1,5 @@
+#!/bin/sh
+#SBATCH --time=60
+#SBATCH --nodes=1
+
+srun bash @-FOLDER-@/full.bash
