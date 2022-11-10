@@ -1,0 +1,28 @@
+# Phantom v2022.0.1 (c) 2007-2020 The Authors
+# input file for Phantom star setup
+            iprofile =           2    ! 1=Unif,2=Poly,3=Dens,4=KEPL,5=MESA,6=Piec, 7=Evra
+
+# units
+           mass_unit =      solarm    ! mass unit (e.g. solarm)
+           dist_unit =      solarr    ! distance unit (e.g. au)
+
+# resolution
+                  np =      100000    ! approx number of particles (in box of size 2R)
+          use_exactN =           T    ! find closest particle number to np
+
+# equation of state
+                ieos =           2    ! 1=isothermal,2=adiabatic,10=MESA,12=idealplusrad
+   use_variable_comp =           F    ! Use variable composition (X, Z, mu)
+               gamma =  1.66666667    ! Adiabatic index
+                  mu =      0.5988    ! mean molecular weight
+
+# star properties
+               Rstar =       1.000    ! radius of star
+               Mstar =       1.000    ! mass of star
+
+# relaxation options
+          relax_star =           T    ! relax star automatically during setup
+            tol_ekin =   1.000E-06    ! tolerance on ekin/epot to stop relaxation
+            tol_dens =       1.000    ! % error in density to stop relaxation
+              maxits =        1000    ! maximum number of relaxation iterations
+   write_rho_to_file =           F    ! write density profile to file
