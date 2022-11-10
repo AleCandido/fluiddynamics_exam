@@ -9,4 +9,4 @@ start_time=$(date +%s)
 bash test-run.bash
 bash test-blast.bash
 
-echo TEST-FULL, time: $(expr $end_time - $start_time)s.
+printf "\n\nTEST-FULL, time: $(expr $end_time - $start_time)s.\n\n"

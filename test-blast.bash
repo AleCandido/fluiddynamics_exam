@@ -17,8 +17,8 @@ pushd _runs/blast
 cat Makefile
 make
 make setup
-# setup with 5 particles
-echo "5" | ./phantomsetup blast
+# setup with 15 particles (bare minimum: 8)
+printf "15\n" | ./phantomsetup blast
 ls -l
 
 # actually run
@@ -28,4 +28,5 @@ popd
 
 # compute and print elapsed time
 end_time=$(date +%s)
-echo TEST-BLAST, time: $(expr $end_time - $start_time)s.
+
+printf "\n\nTEST-BLAST, time: $(expr $end_time - $start_time)s.\n\n"

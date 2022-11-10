@@ -19,4 +19,4 @@ make SYSTEM=gfortran test
 
 popd
 
-echo TEST-SUITE, time: $(expr $end_time - $start_time)s.
+printf "\n\nTEST-SUITE, time: $(expr $end_time - $start_time)s.\n\n"
