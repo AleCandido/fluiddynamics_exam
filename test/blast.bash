@@ -2,10 +2,10 @@ source $(dirname ${BASH_SOURCE[0]})/_setup.bash
 
 # Running an example calculation
 # ------------------------------
-mkdir -p ../_runs/blast
-pushd ../_runs/blast
+mkdir -p $SRCDIR/../_runs/blast
+pushd $SRCDIR/../_runs/blast
 
-../../phantom/scripts/writemake.sh sedov >Makefile
+$SRCDIR/../phantom/scripts/writemake.sh sedov >Makefile
 cat Makefile
 make
 make setup
