@@ -9,9 +9,9 @@ start_time=$(date +%s)
 # change directory to script dir
 pushd $(dirname ${BASH_SOURCE[0]})
 
-bash test-run.bash
+bash run.bash
 bash clean.sh
-bash test-blast.bash
+bash blast.bash
 
 popd
 
