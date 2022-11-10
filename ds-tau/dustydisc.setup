@@ -1,7 +1,7 @@
 # input file for disc setup routine
 
 # resolution
-                  np =     1000000    ! number of gas particles
+                  np =      500000    ! number of gas particles
              np_dust =       66666    ! number of large dust particles
 
 # units
