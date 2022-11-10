@@ -1,12 +1,4 @@
-# fail fast
-set -euo pipefail
-shopt -s inherit_errexit
-
-# start timer
-start_time=$(date +%s)
-
-# set common environment variables
-source env-vars.sh
+source $(dirname ${BASH_SOURCE[0]})/_setup.bash
 
 # Running an example calculation
 # ------------------------------
@@ -24,8 +16,4 @@ ls -l
 # actual run
 ./phantom blast.in
 
-popd
-
-# compute and print elapsed time
-end_time=$(date +%s)
-printf "\n\nTEST-BLAST, time: $(expr $end_time - $start_time)s.\n\n"
+source $SRCDIR/_close.bash

@@ -2,4 +2,5 @@
 #SBATCH --time=60
 #SBATCH --nodes=1
 
-srun bash full.bash
+export SRCDIR=$(realpath $(dirname ${BASH_SOURCE[0]}))
+srun bash $SRCDIR/full.bash
