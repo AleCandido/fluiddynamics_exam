@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --time=60
+#SBATCH --time=3-0
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=@-CPUS-@
 #SBATCH --output=@-ROOT-@/_runs/@-PROJECT-@-@-CPUS-@-@-TIME-@-%j.log

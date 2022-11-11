@@ -16,4 +16,4 @@ sed "s|@-TIME-@|$TIME|g" $SCRIPT -i
 sed "s|@-CPUS-@|$CPUS|g" $SCRIPT -i
 chmod +x $SCRIPT
 sbatch $SCRIPT
-# rm -f $SCRIPT
+rm -f $SCRIPT
