@@ -25,7 +25,7 @@
                 tolh =   1.000E-04    ! tolerance on h-rho iterations
 
 # options controlling hydrodynamics, artificial dissipation
-               alpha =  0.203696659  ! art. viscosity parameter
+               alpha =  0.30000000    ! art. viscosity parameter
                 beta =       2.000    ! beta viscosity
         avdecayconst =       0.100    ! decay time constant for viscosity switches
 
@@ -38,7 +38,7 @@
 
 # options controlling sink particles
      h_soft_sinksink =       0.000    ! softening length between sink particles
-               f_acc =       0.800    ! particles < f_acc*h_acc accreted without checks
+               f_acc =       0.250    ! particles < f_acc*h_acc accreted without checks
       r_merge_uncond =       0.000    ! sinks will unconditionally merge within this separation
         r_merge_cond =       0.000    ! sinks will merge if bound within this radius
 
@@ -52,7 +52,7 @@
 
 # options controlling dust (3 dust species)
                idrag =           1    ! gas/dust drag (0=off,1=Epstein/Stokes,2=const K,3=const ts)
-      ilimitdustflux =           F    ! limit the dust flux using Ballabio et al. (2018)
+      ilimitdustflux =           T    ! limit the dust flux using Ballabio et al. (2018)
    icut_backreaction =           0    ! cut the drag on the gas phase (0=no, 1=yes)
 
 # options for injecting/removing particles

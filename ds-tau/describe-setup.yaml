@@ -159,7 +159,7 @@ parameters:
       Tab. 1 (H / R_in)
   alphaSS:
     value: 0.005
-    motivations: |
+    motivation: |
       effective Shakura & Sunyaev (1973) viscosity
     position: |
       Tab. 1 (\alpha_{SS})
@@ -167,20 +167,20 @@ parameters:
   # options for dust
   dust_method:
     value: 1
-    motivations: |
+    motivation: |
       one fluid (for St< 1, Price & Laibe 2015; Ballabio et al. 2018)
     position: |
       one fluid (for St< 1
   dust_to_gas:
     value: 0.01
-    motivations: |
+    motivation: |
       one possible dust disc mass, small enough to make back reaction on the
       gas negligible
     position: |
       to-gas ratio is initially assumed constant for the whole disc
   ndusttypesinp:
     value: 3
-    motivations: |
+    motivation: |
       number of 'small' grain sizes set to two at initializations tiems; this
       number should be 11 for the paper, but here I simplify for shorter and
       less intensive runtime
@@ -188,51 +188,51 @@ parameters:
       We perform simulations with the multigrain one-fluid
   ilimitdustfluxinp:
     value: F
-    motivations: default
+    motivation: default
     position: null
   igrainsize:
     value: 1
-    motivations: |
+    motivation: |
       in order to best reproduce paper settings, only manually offers
       full-control
   grainsizeinp1:
     value: 0.6
-    motivations: |
+    motivation: |
       specify first of three values, most extreme choice for largeness (also in
       the paper, see Fig. 2)
   grainsizeinp2:
     value: 0.0015
-    motivations: |
+    motivation: |
       specify second of three values, smallest choice
   grainsizeinp3:
     value: 0.080
-    motivations: |
+    motivation: |
       specify second of three values, intermidiaedustbinfrac1 choice
   dustbinfrac1:
     value: 0.4
-    motivations: |
+    motivation: |
       mainly interested in the first two dusts, dedicate most of the total - in
       any case they should not interact with each other, due to the limited
       feedback on the gas, so it should be only a matter of resolution
     position: null
   dustbinfrac2:
     value: 0.4
-    motivations: |
+    motivation: |
       see 'dustbinfrac1'
     position: null
   dustbinfrac3:
     value: 0.2
-    motivations: |
+    motivation: |
       see 'dustbinfrac1'
     position: null
   igraindens:
     value: 1
-    motivations: |
+    motivation: |
       use the value provided in the paper
     position: null
   graindensinp1:
     value: 1.000
-    motivations: |
+    motivation: |
       essentially little to not constraint: "the gap width alone cannot
       uniquely constrain the planet mass because changes in the grain density
       (i.e. the Stokes number) can produce the same gap width with a
@@ -243,17 +243,17 @@ parameters:
       Tab. 1 (\rho_d)
   graindensinp2:
     value: 1.000
-    motivations: |
+    motivation: |
       see 'graindensinp1'
     position: null
   graindensinp3:
     value: 1.000
-    motivations: |
+    motivation: |
       see 'graindensinp1'
     position: null
   isetdust:
     value: 0
-    motivations: |
+    motivation: |
       dust-to-gas ratio is initially assumed constant for the whole disc extent
     position: |
       For the dust we use the same functional form of the
@@ -261,13 +261,13 @@ parameters:
   # set planets
   setplanets:
     value: 1
-    motivations: |
+    motivation: |
       the planet is conjecture to sweep the observed gap
     position: |
       the gap width alone cannot uniquely constrain the planet mass 
   nplanets:
     value: 1
-    motivations: |
+    motivation: |
       the conjectured scenario fot the observation involves a single  planet
     position: |
       We model the planet and the central star as sink particles,
@@ -275,7 +275,7 @@ parameters:
   # planet:1
   mplanet1:
     value: 2
-    motivations: |
+    motivation: |
       the paper investigates different cases, for simplicity an intermediate
       one has been picked
     position: |
@@ -284,7 +284,7 @@ parameters:
       Tab. 1 (M_P)
   rplanet1:
     value: 34.5
-    motivations: |
+    motivation: |
       matching the observations
       slightly more distant than the centroid of the gap to account for some
       migration
@@ -294,13 +294,13 @@ parameters:
       Tab. 1 (R_P)
   inclplanet1:
     value: 0.000
-    motivations: |
+    motivation: |
       default + further non-investigated degree of freedom
     position: |
       atic uncertainty arises if one considers extra degrees of free
   accrplanet1:
     value: 0.250
-    motivations: |
+    motivation: |
       Lodato et al. (2019)
     position: |
       he accretion radius of each planet is chosen to be one quarter of the
@@ -309,13 +309,13 @@ parameters:
   # timestepping
   norbits:
     value: 100
-    motivations: |
+    motivation: |
       nough to avoid transients on a short time scale and that the initial
       conditions have washed out
     position: |
       This is certainly achieved in our case,
   deltat:
     value: 0.300
-    motivations: |
+    motivation: |
       frequent enough to collect results, but not too much to save disk space
       -> ~300 dumps

@@ -1,0 +1,160 @@
+description: |
+  explain the reasons for setting parameters to the values given in
+  'dustydisc.in'
+schema:
+  $variable:
+    value: the chosen value
+    motivation: reason for the choice
+    position: |
+      searchable reference in arxiv:2005.04244 ('null' if does not apply);
+      essentially, pieces of text to copy for Ctrl+F search (if multiple
+      references, they are on different lines, separated by lines with a single
+      + sign)
+parameters:
+
+
+  # job name
+  logfile:
+    value: dustydisc01.log
+    motivation: default
+    position: null
+  dumpfile:
+    value: dustydisc_00000.log
+    motivation: default
+    position: null
+
+  # options controlling run time and input/output
+  tmax:
+    value: 1.397E+05
+    motivation: |
+      generated from setup parameters (time expressed in orbits)
+    position: null
+  dtmax:
+    value: 419.026189
+    motivation: |
+      generated from setup parameters (time expressed in orbits)
+    position: null
+  nmax:
+    value: -1
+    motivation: |
+      run time specified in simulation time (`tmax`), no constraint on steps ->
+      ignore this
+    position: null
+  nout:
+    value: -1
+    motivation: |
+      dump frequency specified in simulation time (`dtmax`), no constraint on
+      steps -> ignore this
+    position: null
+  nmaxdumps:
+    value: -1
+    motivation: |
+      do not constraint on maximum dumps, do as many as required
+    position: null
+  twallmax:
+    value: 000:00
+    motivation: |
+      do not constraint simulation length in wall time, intermediate snapshot
+      can be used in any case
+    position: null
+  dtwallmax:
+    value: 012:00
+    motivation: |
+      do not constraint dump frequency in wall time, manually monitor if it is
+      taking too much
+  nfulldump:
+    value: 10
+    motivation: |
+      default reasonable frequency
+    position: null
+  iverbose:
+    value: 0
+    motivation: |
+      default, sensible for production runs (higher values used for debug, not
+      lower because I'm not as confident to completely give up on diagnostics)
+    position: null
+
+  # options controlling accuracy
+  C_cour:
+    value: 0.300
+  C_force:
+    value: 0.250
+  tolv:
+    value: 1.000E-02
+  hfact:
+    value: 1.000
+  tolh:
+    value: 1.000E-04
+
+  # options controlling hydrodynamics, artificial dissipation
+  alpha:
+    value: 0.30000000
+    motivation: |
+      artificial viscosity (AV) coefficient; AV used to model angular momentum
+      transfer
+    position: |
+      (Price et al. 2018, see Sec. 2.6)
+  beta:
+    value: 2.000
+  avdecayconst:
+    value: 0.100
+
+  # options controlling damping
+  idamp:
+    value: 0
+
+  # options controlling equation of state
+  ieos:
+    value: 3
+    motivation: |
+      reproduce the paper
+    position: |
+      We adopt a locally isothermal
+  mu:
+    value: 2.381
+
+  # options controlling sink particles
+  h_soft_sinksink:
+    value: 0.000
+  f_acc:
+    value: 0.250
+    motivation: |
+      reproduce the paper
+    position: |
+      chosen to be one quarter of the Hill radius
+  r_merge_uncond:
+    value: 0.000
+  r_merge_cond:
+    value: 0.000
+
+  # options relating to external forces
+  iexternalforce:
+    value: 0
+
+  # options controlling physical viscosity
+  irealvisc:
+    value: 0
+  shearparam:
+    value: 0.100
+  bulkvisc:
+    value: 0.000
+
+  # options controlling dust (3 dust species)
+  idrag:
+    value: 1
+  ilimitdustflux:
+    value: T
+    motivation: |
+      reproduce the paper
+    position: |
+       Ballabio et al. 2018
+  icut_backreaction:
+    value: 0
+
+  # options for injecting/removing particles
+  rkill:
+    value: -1.000
+
+  # gravitational waves
+  gw:
+    value: F
