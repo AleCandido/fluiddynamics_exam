@@ -106,13 +106,21 @@ parameters:
     position: |
       see 'R_in' (R_out in Tab. 1)
   R_c:
-    value: 70
+    value: 150
     motivation: |
       match observations
     position: |
       where Σc is a normalization constant, chosen in order to
       +
       Tab. 1 (R_c)
+    erratum:
+      value: 70
+      description: |
+        I would have liked to put this value, since is the one in the paper,
+        but I messed up with file versions, and I ended up with the default
+        value.
+        This creates discs with much fatter tails, chaing the scale of power
+        and exponential suppresion.
   disc_m:
     value: 0.0048
     motivation: |
@@ -201,9 +209,16 @@ parameters:
       specify first of three values, most extreme choice for largeness (also in
       the paper, see Fig. 2)
   grainsizeinp2:
-    value: 0.0015
+    value: 0.015
     motivation: |
       specify second of three values, smallest choice
+    erratum:
+      value: 0.0015
+      description: |
+        just mistyped a zero, so it was 150um instead of 15um, resulting in a
+        non-minimal dust size configuration (wrt those presented in the paper)
+        in any case, the most evident gap is in hte large dust, not the small
+        one
   grainsizeinp3:
     value: 0.080
     motivation: |
@@ -264,7 +279,7 @@ parameters:
     motivation: |
       the planet is conjecture to sweep the observed gap
     position: |
-      the gap width alone cannot uniquely constrain the planet mass 
+      the gap width alone cannot uniquely constrain the planet mass
   nplanets:
     value: 1
     motivation: |

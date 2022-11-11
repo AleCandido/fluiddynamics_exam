@@ -10,6 +10,6 @@ pushd $SRCDIR
 ls
 
 bash _clean.bash
-bash disk.bash $CPUS
+bash disc.bash $CPUS
 
 source $SRCDIR/_close.bash

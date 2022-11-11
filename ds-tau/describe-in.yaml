@@ -11,8 +11,6 @@ schema:
       references, they are on different lines, separated by lines with a single
       + sign)
 parameters:
-
-
   # job name
   logfile:
     value: dustydisc01.log
@@ -34,6 +32,12 @@ parameters:
     motivation: |
       generated from setup parameters (time expressed in orbits)
     position: null
+    erratum:
+      value: 418.960442
+      description: |
+        change inherited from patching setup (it changed the default value) -
+        it is a very mild change in any case, less than 1% on the snapshot
+        frequency
   nmax:
     value: -1
     motivation: |
@@ -58,7 +62,7 @@ parameters:
       can be used in any case
     position: null
   dtwallmax:
-    value: 012:00
+    value: 000:00
     motivation: |
       do not constraint dump frequency in wall time, manually monitor if it is
       taking too much
@@ -94,6 +98,10 @@ parameters:
       transfer
     position: |
       (Price et al. 2018, see Sec. 2.6)
+    erratum:
+      value: 0.20337979
+      description: |
+        change inherited from patching setup (it changed the default value)
   beta:
     value: 2.000
   avdecayconst:
@@ -122,6 +130,12 @@ parameters:
       reproduce the paper
     position: |
       chosen to be one quarter of the Hill radius
+    erratum:
+      value: 0.800
+      description: |
+        wrongly interpreted value, the motivation is th one for setting
+        'accrplanet1' in setup, so the good one would have ben keeping the
+        default
   r_merge_uncond:
     value: 0.000
   r_merge_cond:
@@ -145,15 +159,19 @@ parameters:
   ilimitdustflux:
     value: T
     motivation: |
-      reproduce the paper
+      limit the flux to improve dust mass conservation to machine precision
     position: |
-       Ballabio et al. 2018
+      Ballabio et al. 2018
   icut_backreaction:
     value: 0
 
   # options for injecting/removing particles
   rkill:
-    value: -1.000
+    value: 1.000E+04
+    motivation: |
+      kill particles that are too far, since they are no longer relevant and
+      slow down the simulation
+    position: null
 
   # gravitational waves
   gw:

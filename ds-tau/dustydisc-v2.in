@@ -1,14 +1,14 @@
-# Runtime options file for Phantom, written 11/11/2022 00:37:17.3
+# Runtime options file for Phantom, written 11/11/2022 20:18:59.1
 # Options not present assume their default values
 # This file is updated automatically after a full dump
 
 # job name
-             logfile =  dustydisc01.log   ! file to which output is directed
-            dumpfile =  dustydisc_00000.tmp   ! dump file to start from
+             logfile =  dustydisc-v201.log   ! file to which output is directed
+            dumpfile =  dustydisc-v2_00000.tmp   ! dump file to start from
 
 # options controlling run time and input/output
                 tmax =   1.397E+05    ! end time
-               dtmax =  419.026189    ! time between dumps
+               dtmax =  418.960442    ! time between dumps
                 nmax =          -1    ! maximum number of timesteps (0=just get derivs and stop)
                 nout =          -1    ! write dumpfile every n dtmax (-ve=ignore)
            nmaxdumps =          -1    ! stop after n full dumps (-ve=ignore)
@@ -25,7 +25,7 @@
                 tolh =   1.000E-04    ! tolerance on h-rho iterations
 
 # options controlling hydrodynamics, artificial dissipation
-               alpha =  0.30000000    ! art. viscosity parameter
+               alpha =  0.20337979    ! art. viscosity parameter
                 beta =       2.000    ! beta viscosity
         avdecayconst =       0.100    ! decay time constant for viscosity switches
 
@@ -38,7 +38,7 @@
 
 # options controlling sink particles
      h_soft_sinksink =       0.000    ! softening length between sink particles
-               f_acc =       0.250    ! particles < f_acc*h_acc accreted without checks
+               f_acc =       0.800    ! particles < f_acc*h_acc accreted without checks
       r_merge_uncond =       0.000    ! sinks will unconditionally merge within this separation
         r_merge_cond =       0.000    ! sinks will merge if bound within this radius
 
