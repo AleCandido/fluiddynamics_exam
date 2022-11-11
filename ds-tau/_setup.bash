@@ -14,10 +14,11 @@ start_time=$(date +%s)
 # set relevant folders
 export SRCDIR=$(realpath $(dirname ${BASH_SOURCE[0]}))
 export PROJECT=$(basename $SRCDIR)
-export RUNDIR=$(realpath $SRCDIR/../_runs/$PROJECT)
+export RUNDIR=$(realpath $SRCDIR/../_runs/$PROJECT-$CPUS)
 
 echo "PROJECT: $PROJECT"
 echo "SRCDIR: $SRCDIR"
+echo "CPUS: $CPUS"
 echo "RUNDIR: $RUNDIR"
 
 # set common environment variables
