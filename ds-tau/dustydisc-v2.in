@@ -3,8 +3,8 @@
 # This file is updated automatically after a full dump
 
 # job name
-             logfile =  dustydisc-v201.log   ! file to which output is directed
-            dumpfile =  dustydisc-v2_00000.tmp   ! dump file to start from
+             logfile =  dustydisc01.log   ! file to which output is directed
+            dumpfile =  dustydisc_00000.tmp   ! dump file to start from
 
 # options controlling run time and input/output
                 tmax =   1.397E+05    ! end time
