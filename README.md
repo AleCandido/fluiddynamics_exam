@@ -20,7 +20,7 @@ Scripts are collected by folder, descriptions in the respective README files:
 
 - [test](./test)
 - [TDE example](./tde-example)
-- [DS Tau](./ds-tau)
+- [DS Tau](./ds-tau), this is the **exam project**
 
 ## Phantom code
 
