@@ -15,7 +15,7 @@ cp $SRCDIR/dustydisc-v2.setup $RUNDIR/dustydisc.setup
 ./phantomsetup dustydisc.setup
 
 # test run - to check star relaxation
-cp $SRCDIR/dustydisc-v2.in $RUNDIR/dustydisc.in
+cp $SRCDIR/dustydisc-v3.in $RUNDIR/dustydisc.in
 ./phantom dustydisc.in
 # -----------------------------------------------------------------------------
 
