@@ -1,0 +1,25 @@
+description: |
+  file content description
+parameters:
+  description: |
+    parameters in the runcards, mapped to related metadata
+  $items:
+    value: |
+      the chosen value
+    motivation: |
+      reason for the choice
+    position: |
+      searchable reference in arxiv:2005.04244 ('null' if does not apply);
+      essentially, pieces of text to copy for Ctrl+F search (if multiple
+      references, they are on different lines, separated by lines with a single
+      + sign)
+    erratum:
+      description: |
+        list of updates for new versions
+      $items:
+        value: |
+          the new value
+        description: |
+          description of the motivations for the change
+        versions: |
+          list of versions to which the new value applies

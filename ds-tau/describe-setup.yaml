@@ -1,17 +1,8 @@
+schema: ./describe-schema.yaml
 description: |
   explain the reasons for setting parameters to the values given in
   'dustydisc.setup'
-schema:
-  $variable:
-    value: the chosen value
-    motivation: reason for the choice
-    position: |
-      searchable reference in arxiv:2005.04244 ('null' if does not apply);
-      essentially, pieces of text to copy for Ctrl+F search (if multiple
-      references, they are on different lines, separated by lines with a single
-      + sign)
 parameters:
-
   # resolution
   np:
     value: 300000
@@ -114,13 +105,14 @@ parameters:
       +
       Tab. 1 (R_c)
     erratum:
-      value: 70
-      description: |
-        I would have liked to put this value, since is the one in the paper,
-        but I messed up with file versions, and I ended up with the default
-        value.
-        This creates discs with much fatter tails, chaing the scale of power
-        and exponential suppresion.
+      - value: 70
+        description: |
+          I would have liked to put this value, since is the one in the paper,
+          but I messed up with file versions, and I ended up with the default
+          value.
+          This creates discs with much fatter tails, chaing the scale of power
+          and exponential suppresion.
+        versions: [v2]
   disc_m:
     value: 0.0048
     motivation: |
@@ -213,12 +205,13 @@ parameters:
     motivation: |
       specify second of three values, smallest choice
     erratum:
-      value: 0.0015
-      description: |
-        just mistyped a zero, so it was 150um instead of 15um, resulting in a
-        non-minimal dust size configuration (wrt those presented in the paper)
-        in any case, the most evident gap is in hte large dust, not the small
-        one
+      - value: 0.0015
+        description: |
+          just mistyped a zero, so it was 150um instead of 15um, resulting in a
+          non-minimal dust size configuration (wrt those presented in the paper)
+          in any case, the most evident gap is in hte large dust, not the small
+          one
+        versions: [v2]
   grainsizeinp3:
     value: 0.080
     motivation: |

@@ -1,15 +1,7 @@
+schema: ./describe-schema.yaml
 description: |
   explain the reasons for setting parameters to the values given in
   'dustydisc.in'
-schema:
-  $variable:
-    value: the chosen value
-    motivation: reason for the choice
-    position: |
-      searchable reference in arxiv:2005.04244 ('null' if does not apply);
-      essentially, pieces of text to copy for Ctrl+F search (if multiple
-      references, they are on different lines, separated by lines with a single
-      + sign)
 parameters:
   # job name
   logfile:
@@ -33,11 +25,12 @@ parameters:
       generated from setup parameters (time expressed in orbits)
     position: null
     erratum:
-      value: 418.960442
-      description: |
-        change inherited from patching setup (it changed the default value) -
-        it is a very mild change in any case, less than 1% on the snapshot
-        frequency
+      - value: 418.960442
+        description: |
+          change inherited from patching setup (it changed the default value) -
+          it is a very mild change in any case, less than 1% on the snapshot
+          frequency
+        versions: [v2, v3]
   nmax:
     value: -1
     motivation: |
@@ -99,14 +92,20 @@ parameters:
     position: |
       (Price et al. 2018, see Sec. 2.6)
     erratum:
-      value: 0.20337979
-      description: |
-        change inherited from patching setup: while before I set to the value
-        given in the paper, here I left the value generated, in principle
-        from $\alpha_{SS}$, also quoted in the paper
-        there is no agreement between the two settings, so it has to have been
-        generated from something else too, that has been set differently from
-        the original paper setup
+      - value: 0.20337979
+        description: |
+          change inherited from patching setup: while before I set to the value
+          given in the paper, here I left the value generated, in principle
+          from $\alpha_{SS}$, also quoted in the paper
+          there is no agreement between the two settings, so it has to have
+          been generated from something else too, that has been set differently
+          from the original paper setup
+        versions: [v2]
+      - value: 0.300
+        description: |
+          set back to the original value (manually in the input file, as
+          originally done), with the hope to better match the paper results
+        versions: [v3]
   beta:
     value: 2.000
   avdecayconst:
@@ -136,11 +135,12 @@ parameters:
     position: |
       chosen to be one quarter of the Hill radius
     erratum:
-      value: 0.800
-      description: |
-        wrongly interpreted value, the motivation is th one for setting
-        'accrplanet1' in setup, so the good one would have ben keeping the
-        default
+      - value: 0.800
+        description: |
+          wrongly interpreted value, the motivation is th one for setting
+          'accrplanet1' in setup, so the good one would have ben keeping the
+          default
+        versions: [v2, v3]
   r_merge_uncond:
     value: 0.000
   r_merge_cond:
