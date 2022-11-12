@@ -101,7 +101,12 @@ parameters:
     erratum:
       value: 0.20337979
       description: |
-        change inherited from patching setup (it changed the default value)
+        change inherited from patching setup: while before I set to the value
+        given in the paper, here I left the value generated, in principle
+        from $\alpha_{SS}$, also quoted in the paper
+        there is no agreement between the two settings, so it has to have been
+        generated from something else too, that has been set differently from
+        the original paper setup
   beta:
     value: 2.000
   avdecayconst:
