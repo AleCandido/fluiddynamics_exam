@@ -1,11 +1,28 @@
 export CPUS=0
 source $(dirname ${BASH_SOURCE[0]})/_setup.bash
 
-REMOTE=phantomblot
-REMOTEFOLDER='~/cave/Projects/Misc/fluiddynamics_exam/_runs/ds-tau-1'
-# REMOTE=galileo
-# REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-32'
-DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT@$REMOTE
+case $1 in
+phantomblot)
+  # --- phantomblot ---
+  REMOTE=phantomblot
+  REMOTEFOLDER='~/cave/Projects/Misc/fluiddynamics_exam/_runs/ds-tau-1'
+  DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT@$REMOTE
+  ;;
+  # --- galileo ---
+galileo)
+  REMOTE=galileo
+  REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-32'
+  DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT@$REMOTE
+  ;;
+  # ---
+galileo-2)
+  REMOTE=galileo
+  REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-31'
+  DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT-31@$REMOTE
+  ;;
+  # ---------------
+esac
+
 mkdir -p $DUMPDIR
 
 if [ -f $DUMPDIR/dustydisc_00000 ]; then
