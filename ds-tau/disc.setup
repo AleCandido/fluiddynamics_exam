@@ -1,0 +1,48 @@
+# input file for disc setup routine
+
+# resolution
+                  np =      300000    ! number of gas particles
+
+# units
+           dist_unit =          au    ! distance unit (e.g. au,pc,kpc,0.1pc)
+           mass_unit =      solarm    ! mass unit (e.g. solarm,jupiterm,earthm)
+
+# central object(s)/potential
+            icentral =           1    ! use sink particles or external potential (0=potential,1=sinks)
+              nsinks =           1    ! number of sinks
+
+# options for central star
+                  m1 =       0.830    ! star mass
+               accr1 =       1.000    ! star accretion radius
+
+# options for gas accretion disc
+             isetgas =           0    ! how to set gas density profile (0=total disc mass,1=mass within annulus,2=surface density normalisation,3=surface density at reference radius,4=minimum Toomre Q)
+           itapergas =           T    ! exponentially taper the outer disc profile
+        itapersetgas =           0    ! how to set taper (0=exp[-(R/R_c)^(2-p)], 1=[1-exp(R-R_out)]
+          ismoothgas =           T    ! smooth inner disc
+               iwarp =           F    ! warp disc
+                R_in =       10.00    ! inner radius
+               R_ref =       10.00    ! reference radius
+               R_out =        100.    ! outer radius
+                 R_c =         70.    ! characteristic radius of the exponential taper
+              disc_m =       0.048    ! disc mass
+              pindex =       1.000    ! p index
+              qindex =       0.250    ! q index
+             posangl =       0.000    ! position angle (deg)
+                incl =       0.000    ! inclination (deg)
+                 H_R =       0.060    ! H/R at R=R_ref
+             alphaSS =       0.005    ! desired alphaSS
+
+# set planets
+          setplanets =           1    ! add planets? (0=no,1=yes)
+            nplanets =           1    ! number of planets
+
+# planet:1
+            mplanet1 =       2.000    ! planet mass (in Jupiter mass)
+            rplanet1 =        34.5    ! planet distance from star
+         inclplanet1 =       0.000    ! planet orbital inclination (deg)
+         accrplanet1 =       0.250    ! planet accretion radius (in Hill radius)
+
+# timestepping
+             norbits =         100    ! maximum number of outer planet orbits
+              deltat =       0.300    ! output interval as fraction of orbital period
