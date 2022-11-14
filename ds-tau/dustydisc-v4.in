@@ -4,7 +4,7 @@
 
 # job name
              logfile =  dustydisc01.log   ! file to which output is directed
-            dumpfile =  dustydisc_00000   ! dump file to start from
+            dumpfile =  dustydisc_00000.tmp   ! dump file to start from
 
 # options controlling run time and input/output
                 tmax =   1.387E+05    ! end time

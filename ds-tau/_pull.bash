@@ -9,16 +9,22 @@ phantomblot)
   DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT@$REMOTE
   ;;
   # --- galileo ---
-galileo)
+galileo-32)
   REMOTE=galileo
   REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-32'
   DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT@$REMOTE
   ;;
   # ---
-galileo-1)
+galileo-31)
   REMOTE=galileo
   REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-31'
   DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT-31@$REMOTE
+  ;;
+  # ---------------
+galileo-30)
+  REMOTE=galileo
+  REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-30'
+  DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT-30@$REMOTE
   ;;
   # ---------------
 esac
