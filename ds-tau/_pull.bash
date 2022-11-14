@@ -26,6 +26,11 @@ galileo-30)
   REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-30'
   DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT-30@$REMOTE
   ;;
+galileo-29)
+  REMOTE=galileo
+  REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-29'
+  DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT-30@$REMOTE
+  ;;
   # ---------------
 esac
 
