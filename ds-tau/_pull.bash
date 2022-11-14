@@ -15,7 +15,7 @@ galileo)
   DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT@$REMOTE
   ;;
   # ---
-galileo-2)
+galileo-1)
   REMOTE=galileo
   REMOTEFOLDER='~/fluiddynamics_exam/_runs/ds-tau-31'
   DUMPDIR=$(dirname $RUNDIR)/_results@$PROJECT-31@$REMOTE
@@ -31,6 +31,7 @@ else
   last=0
 fi
 
+scp $REMOTE:$REMOTEFOLDER/dustydiscSink\* $DUMPDIR/
 for i in $(seq -f "%05g" $last 400); do
   scp $REMOTE:$REMOTEFOLDER/dustydisc_$i $DUMPDIR/
 done
