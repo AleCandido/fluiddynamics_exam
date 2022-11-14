@@ -11,11 +11,11 @@ make
 make setup
 
 # copy prepared configuration
-cp $SRCDIR/dustydisc-v2.setup $RUNDIR/dustydisc.setup
+cp $SRCDIR/dustydisc-v3.setup $RUNDIR/dustydisc.setup
 ./phantomsetup dustydisc.setup
 
 # test run - to check star relaxation
-cp $SRCDIR/dustydisc-v3.in $RUNDIR/dustydisc.in
+cp $SRCDIR/dustydisc-v4.in $RUNDIR/dustydisc.in
 ./phantom dustydisc.in
 # -----------------------------------------------------------------------------
 
