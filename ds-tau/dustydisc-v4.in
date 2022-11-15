@@ -1,4 +1,4 @@
-# Runtime options file for Phantom, written 14/11/2022 16:03:36.1
+# Runtime options file for Phantom, written 15/11/2022 15:24:05.7
 # Options not present assume their default values
 # This file is updated automatically after a full dump
 
@@ -7,8 +7,8 @@
             dumpfile =  dustydisc_00000.tmp   ! dump file to start from
 
 # options controlling run time and input/output
-                tmax =   1.387E+05    ! end time
-               dtmax =  416.231018    ! time between dumps
+                tmax =   1.397E+05    ! end time
+               dtmax =  418.960442    ! time between dumps
                 nmax =          -1    ! maximum number of timesteps (0=just get derivs and stop)
                 nout =          -1    ! write dumpfile every n dtmax (-ve=ignore)
            nmaxdumps =          -1    ! stop after n full dumps (-ve=ignore)

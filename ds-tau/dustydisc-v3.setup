@@ -2,6 +2,7 @@
 
 # resolution
                   np =      300000    ! number of gas particles
+             np_dust =       20000    ! number of large dust particles
 
 # units
            dist_unit =          au    ! distance unit (e.g. au,pc,kpc,0.1pc)
@@ -25,11 +26,11 @@
                R_ref =         10.    ! reference radius
                R_out =        100.    ! outer radius
                  R_c =         70.    ! characteristic radius of the exponential taper
-              disc_m =       0.048    ! disc mass
+              disc_m =      0.0048    ! disc mass
               pindex =       1.000    ! p index
               qindex =       0.250    ! q index
              posangl =       0.000    ! position angle (deg)
-                incl =          0.    ! inclination (deg)
+                incl =       0.000    ! inclination (deg)
                  H_R =       0.060    ! H/R at R=R_ref
              alphaSS =       0.005    ! desired alphaSS
 
@@ -37,15 +38,14 @@
          dust_method =           1    ! dust method (1=one fluid,2=two fluid,3=Hybrid)
          dust_to_gas =       0.010    ! dust to gas ratio
        ndusttypesinp =           2    ! number of grain sizes
-   ilimitdustfluxinp =           F    ! limit dust diffusion using Ballabio et al. (2018)
+   ilimitdustfluxinp =           T    ! limit dust diffusion using Ballabio et al. (2018)
           igrainsize =           1    ! grain size distribution (0=log-space,1=manually)
-       grainsizeinp1 =      0.1000    ! grain size1 (in cm)
+       grainsizeinp1 =      0.6000    ! grain size1 (in cm)
        grainsizeinp2 =      0.0001    ! grain size2 (in cm)
         dustbinfrac1 =       0.500    ! dust bin fraction1 (frac. of total dust)
         dustbinfrac2 =       0.500    ! dust bin fraction2 (frac. of total dust)
-          igraindens =           1    ! grain density input (0=equal,1=manually)
-       graindensinp1 =       1.000    ! grain density1 (in g/cm^3)
-       graindensinp2 =       1.000    ! grain density2 (in g/cm^3)
+          igraindens =           0    ! grain density input (0=equal,1=manually)
+        graindensinp =       1.000    ! intrinsic grain density (in g/cm^3)
             isetdust =           0    ! how to set dust density profile (0=equal to gas,1=custom,2=equal to gas with cutoffs)
 
 # set planets
